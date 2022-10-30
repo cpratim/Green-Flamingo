@@ -9,8 +9,9 @@ from web.blueprints import (
 
 def create_app():
     app = Flask(__name__)
+    app.config['LOG_LEVEL'] = 'DEBUG'
     app.register_blueprint(trade_blueprint)
     app.register_blueprint(index_blueprint)
-    socketio = SocketIO(app)
-    CORS(app)
-    return socketio
+    # socketio = SocketIO(app, logger=True, engineio_logger=True)
+    # CORS(app)
+    return app

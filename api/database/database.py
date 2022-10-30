@@ -21,24 +21,26 @@ class Database(object):
             json.dump(self.data, f)
         self.load()
 
-    def populate(self):
-        self.data = {
-            'order_book': {
-                'bids': [],
-                'asks': [],
-            },
-            'trades': [],
-            'users': {},
+    def add_ticker(self, ticker, artist, url, price):
+        if ticker in self.data['tickers']:
+            return False
+        self.data['tickers'][ticker] = {
+            'id': generate_id(ticker),
+            'artist': artist,
+            'url': url,
+            'price': price,
+            'orderbook':  {},
         }
         self.save()
+        return True
 
-    def add_user(self, username, password):
+    def add_user(self, username, password, default_balance=1000):
         if username in self.data['users']:
             return False
         self.data['users'][username] = {
             'id': generate_id(username),
             'password': hash_password(password),
-            'balance': 10000,
+            'balance': default_balance,
         }
         self.save()
         return True

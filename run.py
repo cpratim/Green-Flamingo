@@ -1,3 +1,4 @@
+from tabnanny import verbose
 from api import create_api
 from web import create_app
 from threading import Thread
@@ -11,9 +12,9 @@ def run_api():
 
 
 def run_app():
-    app.run()
+    app.run(debug=True)
 
 
 if __name__ == '__main__':
-    Thread(target=run_api).start()
-    Thread(target=run_app).start()
+    # Thread(target=run_api).start()
+    run_app()
