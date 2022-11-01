@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Register</title>
+        <link rel="stylesheet" href="https://bootswatch.com/5/lux/bootstrap.min.css">
+        <link rel="stylesheet" href="/css/common/common.css">
+        <link rel="stylesheet" href="/css/auth/auth.css">
+    </head>
+    <body>
+        <div id="auth-form-wrapper">
+            <h1 id="auth-header">Register</h1>
+            <div class="form-group" id="auth-form">
+                <div class="form-floating mb-3">
+                    <input id="username" type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                    <label for="floatingInput">Username</label>
+                  </div>
+                <div class="form-floating mb-3">
+                  <input id="email" type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                  <label for="floatingInput">Email address</label>
+                </div>
+                <div class="form-floating mb-3">
+                  <input id="password" type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                  <label for="floatingPassword">Password</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                    <label for="floatingPassword">Confirm Password</label>
+                </div>
+                
+            </div>
+            <button type="submit" class="btn btn-primary submit-button" id="register-submit-button">Submit</button>
+            <p>Already have an account? <a href='/register'>Login Here!</a></p>
+            <div id="alerts"></div>
+        </div>
+        <div id="login-submit-button"></div>
+        <script src="/js/common/alert.js"></script>
+        <script src="/js/auth/auth.js"></script>
+        
+    </body>
+</html>

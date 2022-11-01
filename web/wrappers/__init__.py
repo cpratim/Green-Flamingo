@@ -1,0 +1,1 @@
+from web.wrappers.login_required import login_required

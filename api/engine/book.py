@@ -4,47 +4,42 @@ from heapq import (
     heappush,
     heapify
 )
+from api import database
+from api.database import Database
+
+
+database = Database()
 
 
 class OrderBook(object):
 
-    def __init__(self):
-        self.bids = []
-        self.asks = []
-        heapify(self.bids)
-        heapify(self.asks)
+    def __init__(self, artist, ticker):
+        self.orderbook = database.get_orderbook(artist, ticker)
 
-    def add_order(self, order, side):
-        if side == 'buy':
-            if self.asks and self.asks[0][0] <= order['price']:
-                ask = self.execute_order(order, side)
-                return {
-                    'type': 'match',
-                    'fill_price': ask[0],
-                }
-            else:
-                heappush(self.bids, (-order['price'], order['size']))
-        else:
-            if self.bids and -self.bids[0][0] >= order['price']:
-                bid = self.execute_order(order, side)
-                return {
-                    'type': 'match',
-                    'fill_price': -bid[0],
-                }
-            else:
-                heappush(self.asks, (order['price'], order['size']))
+    def add_order(self, order):
+        max_buy = max(self.orderbook['buy'].keys())
+        min_sell = min(self.orderbook['sell'].keys())
+        side = order['side']
+        if side == 'buy' and order['price'] >= min_sell:
+            return self.match(side, order, min_sell)
+        elif side == 'sell' and order['price'] <= max_buy:
+            return self.match(side, order, max_buy)
         return {
-            'type': 'pending',
+            'type': 'add',
+            'order': order,
         }
 
-    def execute_order(self, order, side):
+    def match(self, side, order, fill_price):
         if side == 'buy':
-            return heappop(self.asks)
+            latest = self.orderbook['sell'][fill_price].pop(0)
+            return {
+                'type': 'match',
+                'fill_price': fill_price,
+            }
         else:
-            return heappop(self.bids)
-
-    def get_order_book(self):
-        return {
-            'bids': self.bids,
-            'asks': self.asks,
-        }
+            latest = self.orderbook['buy'][fill_price].pop(0)
+            return {
+                'type': 'match',
+                'fill_price': fill_price,
+            }
+        

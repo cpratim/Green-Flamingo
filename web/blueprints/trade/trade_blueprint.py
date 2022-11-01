@@ -1,35 +1,45 @@
 from flask import Blueprint, render_template
+from flask import request, session
+from web import main_blueprint, socketio
+from web.wrappers import login_required
 from flask_socketio import emit
-from flask import request
+import requests
+from web.config import API_HOST
 
+templates_dir = 'blueprints/trade/templates'
 
-trade_blueprint = Blueprint('trade', __name__, template_folder='templates')
-
-
-@trade_blueprint.route('/place_trade', methods=['POST'])
+@main_blueprint.route('/place_trade', methods=['POST'])
 def place_trade():
     json = request.get_json()
     emit('trade', json, broadcast=True)
     return '200'
 
 
-@trade_blueprint.route('/place_order', methods=['POST'])
+@main_blueprint.route('/place_order', methods=['POST'])
 def order():
     json = request.get_json()
     emit('order', json, broadcast=True)
     return '200'
 
 
-@trade_blueprint.route('/trade', methods=['GET'])
-def trade():
-    return render_template('trade.html')
+@main_blueprint.route('/test', methods=['GET'])
+def test():
+    return render_template('macros/navbar.html')
+
+@main_blueprint.route('/trade/<string:username>/<string:ticker>', methods=['GET'])
+@login_required
+def trade(username, ticker):
+    ticker_data = requests.get(API_HOST + f'/api/v1/trade/ticker/{username}/{ticker}').json()
+    return render_template(f'{templates_dir}/trade.html')
 
 
-@trade_blueprint.route('/asset/<string:id>', methods=['GET'])
-def asset():
-    return render_template('trade.html')
-
-
-@trade_blueprint.route('/create', methods=['GET'])
+@main_blueprint.route('/create', methods=['GET'])
+@login_required
 def create():
-    return render_template('create.html')
+    return render_template(f'{templates_dir}/create.html', username=session['username'])
+
+
+@socketio.on('upload')
+def image_upload_handler(image):
+    response = requests.post(f'{API_HOST}/api/v1/art/upload', data=image)
+    emit('upload', response.json()['id'], broadcast=True)

@@ -5,6 +5,8 @@
         <link rel="stylesheet" href="https://bootswatch.com/5/lux/bootstrap.min.css">
         <link rel="stylesheet" href="/css/common/common.css">
         <link rel="stylesheet" href="/css/trade/create.css">
+        <meta id="image-id" content="">
+        <meta id="username" content="{{username}}">
     </head>
     <body>
         <div id="create-wrapper">
@@ -16,30 +18,35 @@
                 
                 <div class="form-group">
                     <label for="formFile" class="form-label mt-4">Default file input example</label>
-                    <input class="form-control" type="file" id="formFile">
+                    <input id="art-input" class="form-control" type="file" id="formFile", name="file">
                 </div>
+                <div id="alerts"></div>
             </div>
             <div id="art-form">
                 <div class="form-group">
-                    <label class="form-label mt-4" for="inputDefault">Name:</label>
-                    <input type="text" class="form-control" placeholder="Mona Lisa" id="inputDefault">
-                    <label class="form-label mt-4" for="inputDefault">Category:</label>
-                    <input type="text" class="form-control" placeholder="Classical" id="inputDefault">
-                    <label class="form-label mt-4" for="inputDefault">Ticker / Symbol:</label>
-                    <input type="text" class="form-control" placeholder="MSLA" id="inputDefault">
-                    <label for="exampleTextarea" class="form-label mt-4">Description</label>
-                    <textarea class="form-control" id="exampleTextarea" rows="3" placeholder="Story behind the art / how it was made or what makes it special"></textarea>
-                    <label class="form-label mt-4">IPO Price:</label>
-
-                    <div class="input-group mb-3">
+                    <label class="form-label mt-4" for="inputDefault">Title:</label>
+                    <input id="art-title" type="text" class="form-control" placeholder="Mona Lisa" id="inputDefault">
+                    <label class="form-label mt-3" for="inputDefault">Category:</label>
+                    <input id="art-category" type="text" class="form-control" placeholder="Classical" id="inputDefault">
+                    <label class="form-label mt-3" for="inputDefault">Ticker / Symbol:</label>
+                    <input id="art-ticker" type="text" class="form-control" placeholder="MSLA" id="inputDefault">
+                    <label for="exampleTextarea" class="form-label mt-3">Description</label>
+                    <textarea id="art-description" class="form-control" id="exampleTextarea" rows="3" placeholder="Story behind the art / how it was made or what makes it special"></textarea>
+                    <label class="form-label mt-3" for="inputDefault">IPO Quantity:</label>
+                    <input id="ipo-quantity" type="text" class="form-control" placeholder="1" id="inputDefault">
+                    <label class="form-label mt-3">IPO Price:</label>
+                    <div class="input-group mb-2">
                         <span class="input-group-text">$</span>
-                        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                        <input id="ipo-price" type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
                         <span class="input-group-text">.00</span>
                     </div>
-                  
+                    <button type="submit" class="btn btn-primary submit-button" id="launch-button">Launch</button>
                 </div>
                 
             </div>
         </div>
+        <script src="/js/common/alert.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js" integrity="sha512-q/dWJ3kcmjBLU4Qc47E4A9kTB4m3wuTY7vkFJDTZKjTs8jhyGQnaUrxa0Ytd0ssMZhbNua9hE+E7Qv1j+DyZwA==" crossorigin="anonymous"></script>
+        <script src="/js/trade/create.js"></script>
     </body>
 </html>
