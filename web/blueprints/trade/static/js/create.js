@@ -35,10 +35,12 @@ function postForm(title, description, ticker, category, ipoPrice, artID, quantit
     }).then(response => {
         return response.json();
     }).then(data => {
+        alerts.innerHTML = '';
         let status = data.status;
         if (status === 'success') {
 
-            window.location.href = `/trade/${usernameMeta.content}/${ticker}`;
+            let alert = createAlert('success', 'IPO Launched!', `/trade/${usernameMeta.content}/${ticker}`, 'Check it out!');
+            alerts.appendChild(alert);
         } else {
             let alert = createAlert('danger', 'Invalid Form Input!', '/create', 'Try Again!');
             alerts.appendChild(alert);

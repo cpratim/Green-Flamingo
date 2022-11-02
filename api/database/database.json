@@ -3,13 +3,26 @@
         "cpratim18": {
             "id": "370763f5d3e1a798c2dd12a99a9b3403abc7443b8086e72ec43884022f6d044f3af5b97f00be87691a06634a229087ecf9ee9ca1b534d001727e02b7fc30e385",
             "email": "cpratim18@gmail.com",
-            "password": "427f843e0197b7dd6be6ba7d8a16cea20ce8928be3450963115ddcad2b2a72ecfcbd24deaf8fc9afc73850a5e9502e42c8d349970088ea1aace8b07efb9ade18"
+            "password": "709aaffb6038711001c03df33440a1e527263a18cab353b3bf892d21c44f031c1044acdf882482753e87304473d9578e2a41d869e87d8b574e92331e2bb332fa"
         }
     },
     "users": {
         "cpratim18": {
             "balance": 1000,
-            "portfolio": {},
+            "portfolio": {
+                "cpratim18.MATH": {
+                    "quantity": 10,
+                    "cost": 10000
+                }
+            },
+            "active_orders": {
+                "cpratim18.MATH": {
+                    "quantity": 10,
+                    "price": 1000,
+                    "side": "sell",
+                    "type": "limit"
+                }
+            },
             "active_tickers": [
                 "MATH"
             ]
@@ -18,13 +31,25 @@
     "tickers": {
         "cpratim18": {
             "MATH": {
-                "title": "10-12",
+                "title": "10-26 Discussion Post",
                 "art_id": "49b74e6f3e1e4411e1aa2b5a91b303cae485639c099fc90f481f3d47ab684ca7ed6103b5128076588c53495ac51cf6b5b37db2b2973496abdc31adc83845447c",
-                "price": 100,
+                "price": 1000,
                 "quantity": 10,
+                "description": "this is my math discussion and its pretty fire so you all should buy it",
+                "category": "Math",
                 "volume": 0,
                 "transactions": 0,
-                "orderbook": {}
+                "orderbook": {
+                    "ask": {
+                        "1000": [
+                            {
+                                "quantity": 10,
+                                "username": "cpratim18"
+                            }
+                        ]
+                    },
+                    "bid": {}
+                }
             }
         }
     }

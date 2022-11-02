@@ -10,6 +10,71 @@
     </head>
     <body>
         {{ navbar() }}
+        <div id="main-wrapper">
+            <div class="left-wrapper" id="left-up">
+                <h1 id="art-title">{{ ticker_data['title'] }}</h1>
+                <h5 id="art-category">{{ ticker_data['category'] }}</h4>
+                <p id="art-description">{{ ticker_data['description'] }}</p>
+                
+                <div id="art-wrapper">
+                    <div id="art" style="background-image: url(http://127.0.0.1:5100/api/v1/art/{{ ticker_data['art_id'] }})"></div>
+                </div>
+            </div>
+            <div class="right-wrapper">
+                <div id="orderbook">
+                    
+                </div>
+            </div>
+        </div>
+        <div id="secondary-wrapper">
+            <div class="left-wrapper">
+                <div class="card mb-3">
+                    <h3 class="card-header">Your Position:</h3>
+                    
+                    
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item position-item">Market Value: ${{position_data['market_value']}}</li>
+                        <li class="list-group-item position-item">Quantity: {{position_data['quantity']}} Paintings</li>
+                        <li class="list-group-item position-item">Average Fill Price: ${{position_data['fill_price']}}</li>
+                    </ul>
+                    
+                    <div class="card-footer text-muted">
+                      Last Updated: {{position_data['last_updated']}}
+                    </div>
+                </div>
+            </div>
+            <div class="right-wrapper">
+                <div id="trade-box">
+
+
+                    <div id="buy-sell-select" class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off" checked="">
+                        <label class="btn btn-outline-primary" for="btnradio2">Sell</label>
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked="">
+                        <label class="btn btn-outline-primary" for="btnradio1">Buy</label>
+                        
+                    </div>
+                    <div class="form-group" id="trade-form">
+                        <label for="exampleSelect1" class="form-label mt-1">Order Type:</label>
+                        <select id="market-limit-select" class="form-select" id="exampleSelect1">
+                            <option>Market</option>
+                            <option>Limit</option>
+                        </select>
+                        <label class="col-form-label col-form-label mt-1" for="inputSmall">Quantity:</label>
+                        <input class="form-control form-control-sm" type="text" placeholder="0 shares" id="inputSmall">
+                        <label id="price-label" class="col-form-label col-form-label mt-1" for="inputSmall">Market Price:</label>
+                        <input id="price-input" class="form-control form-control-sm" disabled="" type="text" placeholder="100$" id="inputSmall">
+                        <button id="submit-order-button" type="submit" class="btn btn-primary">Submit Buy Order</button>
+                    </div>
+                </div>
+                
+  
+            </div>
+            
+        </div>
         
+        <script src="/js/common/alert.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js" integrity="sha512-q/dWJ3kcmjBLU4Qc47E4A9kTB4m3wuTY7vkFJDTZKjTs8jhyGQnaUrxa0Ytd0ssMZhbNua9hE+E7Qv1j+DyZwA==" crossorigin="anonymous"></script>
+        <script src="/js/trade/trade.js"></script>
     </body>
 </html>

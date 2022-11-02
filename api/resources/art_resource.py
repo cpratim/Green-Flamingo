@@ -1,4 +1,5 @@
 import re
+from unicodedata import category
 from flask import (
     jsonify,
     request,
@@ -44,6 +45,8 @@ class SubmitResource(Resource):
         ipo_price = data['ipoPrice']
         ticker = data['ticker']
         quantity = data['quantity']
+        description = data['description']
+        category = data['category']
         try:
             int(ipo_price)
             int(quantity)
@@ -51,7 +54,7 @@ class SubmitResource(Resource):
             return jsonify({'status': 'failed'})
         if int(ipo_price) <= 0 or int(quantity) <= 0 or len(ticker) > 5 or len(ticker) < 1:
             return jsonify({'status': 'failed'})
-        ticker = database.add_ticker(title, ticker, username, art_id, ipo_price, quantity)
+        ticker = database.add_ticker(title, ticker, username, art_id, ipo_price, quantity, description, category)
         if not ticker:
             return jsonify({'status': 'failed'})
         return jsonify({

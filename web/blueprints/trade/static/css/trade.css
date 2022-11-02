@@ -1,0 +1,91 @@
+#main-wrapper {
+    width: 1000px;
+    margin-left: calc(50% - 500px);
+    margin-top: 10vh;
+    height: 300px;
+}
+
+#art-wrapper {
+    width : 50%;
+    height : 250px;
+    margin-left: 25%;
+   
+}
+
+#art {
+    width : 100%;
+    margin-top: 40px;
+    height : 100%;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 1px 1px 25px 1px rgba(0,0,0,0.5);
+}
+
+#art-title {
+    font-weight: bold;
+    font-size: 25px;
+}
+
+#art-description {
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+.left-wrapper {
+    width: 50%;
+    float: left;
+    padding: 20px;
+
+}
+
+#left-up {
+    border-right: 1px solid black;
+}
+
+.right-wrapper {
+    width: 50%;
+    float: right;
+    padding: 50px;
+}
+
+#buy-sell-select {
+    width: 60%;
+    margin-left: 20%;
+}
+
+#trade-box {
+    width: 100%;
+    height: 400px;
+}
+
+#trade-form {
+    margin-top: 20px;
+}
+
+#submit-order-button {
+    width: 100%;
+    margin-top: 10px;
+    opacity: .9;
+    background-color: #28a745;
+}
+
+#submit-order-button:hover {
+    opacity: 1;
+}
+
+#secondary-wrapper {
+    width: 1000px;
+    margin-left: calc(50% - 500px);
+    margin-top: 15vh;
+    height: 600px;
+}
+
+.position-item {
+    font-size: 14px;
+}
+
+#orderbook {
+    width: 100%;
+    height: 100px;
+    border: 1px solid black;
+}

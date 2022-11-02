@@ -33,10 +33,43 @@ class OrderResource(Resource):
 class TickerResource(Resource):
     
     def get(self, username, ticker):
-
         data = database.get_ticker_data(username, ticker)
         if data is None:
             return jsonify({
                 'error': 'Ticker does not exist',
+            })
+        return jsonify(data)
+
+
+@trade_namespace.route('/portfolio/<string:username>')
+class PortfolioResource(Resource):
+        
+    def get(self, username):
+        data = database.get_portfolio(username)
+        if data is None:
+            return jsonify({
+                'error': 'User does not exist',
+            })
+        return jsonify(data)
+
+@trade_namespace.route('/position/<string:username>/<string:artist>/<string:ticker>')
+class PositionResource(Resource):
+        
+    def get(self, username, artist, ticker):
+        data = database.get_position(artist, ticker, username)
+        if data is None:
+            return jsonify({
+                'empty': '400',
+            })
+        return jsonify(data)
+
+@trade_namespace.route('/orderbook/<string:artist>/<string:ticker>')
+class OrderBookResource(Resource):
+            
+    def get(self, artist, ticker):
+        data = database.get_orderbook(artist, ticker)
+        if data is None:
+            return jsonify({
+                'empty': '400',
             })
         return jsonify(data)

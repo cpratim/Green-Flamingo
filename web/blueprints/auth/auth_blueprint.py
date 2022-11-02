@@ -5,7 +5,7 @@ from flask import make_response
 from web.config import API_HOST
 from web import main_blueprint
 
-templates_dir = 'auth/templates'
+templates_dir = 'blueprints/auth/templates'
 
 
 @main_blueprint.route('/login', methods=['GET'])
