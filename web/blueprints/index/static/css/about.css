@@ -1,0 +1,160 @@
+/* google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+
+/* css variables */
+:root {
+    --header-height: 64px;
+    --dark-green: #006341;
+
+    --body-font: 'Lato', sans-serif;
+    --title-font: 'Raleway', sans-serif;
+
+    --biggest-font-size: 2.75rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+    --tiny-font-size: .625rem;
+
+    --font-medium: 500;
+    --font-semibold: 600;
+
+    --z-fixed: 100;
+}
+
+/* base stuff */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body, 
+button,
+input, 
+textarea {
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+}
+
+h1, h2, h3 {
+    font-weight: var(--font-semibold);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer; 
+    border: none; 
+    outline: none;
+}
+
+/* reusable classes */
+.container{
+    max-width: 1920px;
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+.main{
+    overflow: hidden;
+}
+
+/* header & nav  */
+.header{
+    font-size: var(--h2-font-size);
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: var(--z-fixed);
+    font-weight: var(--font-semibold);
+    border-bottom: 1px solid black;
+}
+
+.nav{
+    height: var(--header-height);
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+}
+
+.vl{
+    margin-left: 15px;
+    border-left: 1px solid black;
+    height: 64px;
+}
+
+.nav_logo{
+    color: var(--dark-green);
+    margin-left: 20px;
+    margin-right: 16px;
+}
+
+.top_nav{
+    float: left;
+    border-radius: 64px;
+    padding: 16px;
+    flex: 1 1 200px;
+}
+
+.topnav_active{
+    text-decoration: underline;
+    text-decoration-thickness: 1.3px;
+    text-underline-offset: 8px;
+}
+
+.nav_link{
+    color: black; 
+    padding: 16px;
+    display: flex; 
+    border-radius: 80px;
+}
+
+.nav_list{
+    display: flex; 
+    align-items: center;
+}
+
+.scroll-header{
+    box-shadow: 0 4px 4px black;
+}
+
+.login-register{
+    float: right;
+    margin-right: 20px;
+    font-size: var(--h3-font-size);
+}
+
+.login{
+    color: black;
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-right: 10px;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+.register{
+    background: black;
+    color: white;
+    padding: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border: 1px solid black;
+    border-radius: 20px;
+}
