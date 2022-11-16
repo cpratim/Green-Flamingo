@@ -76,7 +76,7 @@ button {
 }
 
 .section{
-    padding: 64px 0 16px;
+    padding: 40px 0 32px;
 }
 
 .grid{
@@ -247,9 +247,9 @@ button {
 }
 
 /* problem */
-
 .problem{
-    background: gray;
+    border-top: 1px solid black;
+    background: #F0F0F0;
     display: flex; 
     justify-content: center;
     align-items: center;
@@ -270,24 +270,30 @@ button {
 }
 
 .problem_img{
-    width: 100%;
+    width: 90%;
     height: 100%;
     object-fit: cover;
-    padding-left: 1rem;
 }
 
 .problem_text{
-    text-align: center;
+    text-align: left;
     padding: 1rem;
     margin: 1rem;
-    margin-top: 5rem;
+    margin-top: 7rem;
+    margin-bottom: 5rem;
+}
+
+.problem_s_title{
+    font-family: var(--title-font);
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-medium);
 }
 
 .problem_title{
     font-family: var(--title-font);
     font-size: 1.75rem;
     font-weight: var(--font-medium);
-    text-align: center;
+    text-align: left;
 }
 
 .problem_description{
@@ -296,6 +302,70 @@ button {
     text-align: left;
 }
 
+/* features */
+.features{
+    border-top: 1px solid black;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.features_container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 1.25rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.feature{
+    text-align: center;
+    padding: 1rem;
+    margin: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.feature_img{
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.feature_title{
+    margin-top: 16px;
+    margin-bottom: 10px;
+    font-size: var(--h2-font-size);
+    font-weight: var(--font-semibold);
+    text-align: center;
+}
+
+.feature_description{
+    font-size: var(--h3-font-size);
+    margin-top: 20px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+/* how it works */
+.functions{
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-top: 1px solid black;
+}
+
+.functions_container{
+    align-items: center;
+    justify-content: center;
+}
+
+.function_img{
+    padding-top: 1rem;
+    width: 100%;
+    height: 100vh;
+}
 
 /* footer */
 .footer{
