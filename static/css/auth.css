@@ -1,0 +1,19 @@
+#auth-form-wrapper {
+    width: 400px;
+    margin-left: calc(50% - 200px);
+    margin-top: 25vh;
+}
+
+#auth-header {
+    margin-bottom: 20px;
+}
+
+.submit-button {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.submit-button:hover {
+    background-color: #4CAF50;
+}

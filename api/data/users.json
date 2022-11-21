@@ -1,0 +1,533 @@
+{
+    "xKamiV2x": {
+        "balance": 809.2200000000001,
+        "active_order": {},
+        "history": [
+            {
+                "side": "Buy",
+                "price": 100.0,
+                "quantity": 10.0,
+                "type": "filled"
+            },
+            {
+                "side": "Sell",
+                "price": 100.05,
+                "quantity": 10.0,
+                "type": "filled"
+            },
+            {
+                "side": "Buy",
+                "price": 107.33,
+                "quantity": 8.0,
+                "type": "filled"
+            },
+            {
+                "side": "Sell",
+                "price": 98.58,
+                "quantity": 8.0,
+                "type": "filled"
+            },
+            {
+                "side": "Buy",
+                "price": 99.26,
+                "quantity": 8.0,
+                "type": "filled"
+            },
+            {
+                "side": "Sell",
+                "price": 95.01,
+                "quantity": 8.0,
+                "type": "filled"
+            },
+            {
+                "side": "Buy",
+                "price": 88.71,
+                "quantity": 8.0,
+                "type": "filled"
+            },
+            {
+                "side": "Sell",
+                "price": 84.9,
+                "quantity": 8.0,
+                "type": "filled"
+            },
+            {
+                "side": "Buy",
+                "price": 76.53,
+                "quantity": 8.0,
+                "type": "filled"
+            },
+            {
+                "side": "Sell",
+                "price": 75.06,
+                "quantity": 8.0,
+                "type": "filled"
+            },
+            {
+                "side": "Buy",
+                "price": 79.71,
+                "quantity": 8.0,
+                "type": "filled"
+            },
+            {
+                "side": "Sell",
+                "price": 80.81,
+                "quantity": 8.0,
+                "type": "filled"
+            },
+            {
+                "side": "Buy",
+                "price": 87.24,
+                "quantity": 8.0,
+                "type": "filled"
+            },
+            {
+                "side": "Sell",
+                "price": 87.82,
+                "quantity": 8.0,
+                "type": "filled"
+            },
+            {
+                "side": "Buy",
+                "price": 91.45,
+                "quantity": 8.0,
+                "type": "filled"
+            },
+            {
+                "side": "Sell",
+                "price": 88.22,
+                "quantity": 8.0,
+                "type": "filled"
+            },
+            {
+                "side": "Buy",
+                "price": 90.04,
+                "quantity": 8.0,
+                "type": "filled"
+            },
+            {
+                "side": "Sell",
+                "price": 83.09,
+                "quantity": 8.0,
+                "type": "filled"
+            },
+            {
+                "side": "Buy",
+                "price": 82.06,
+                "quantity": 8.0,
+                "type": "filled"
+            },
+            {
+                "side": "Sell",
+                "price": 84.93,
+                "quantity": 8.0,
+                "type": "filled"
+            }
+        ],
+        "portfolio": {
+            "ECON": 0.0
+        }
+    },
+    "annie": {
+        "balance": 425.6699999999999,
+        "active_order": {},
+        "history": [
+            {
+                "side": "Buy",
+                "price": 100.0,
+                "quantity": 5.0,
+                "type": "filled"
+            },
+            {
+                "side": "Buy",
+                "price": 95.75,
+                "quantity": 1.0,
+                "type": "filled"
+            },
+            {
+                "side": "Buy",
+                "price": 91.84,
+                "quantity": 1.0,
+                "type": "filled"
+            },
+            {
+                "side": "Buy",
+                "price": 96.16,
+                "quantity": 1.0,
+                "type": "filled"
+            },
+            {
+                "side": "Sell",
+                "price": 99.53,
+                "quantity": 1.0,
+                "type": "filled"
+            },
+            {
+                "side": "Sell",
+                "price": 101.2,
+                "quantity": 1.0,
+                "type": "filled"
+            },
+            {
+                "side": "Sell",
+                "price": 109.61,
+                "quantity": 1.0,
+                "type": "filled"
+            },
+            {
+                "side": "Buy",
+                "price": 98.99,
+                "quantity": 1.0,
+                "type": "filled"
+            },
+            {
+                "side": "Buy",
+                "price": 88.93,
+                "quantity": 1.0,
+                "type": "filled"
+            },
+            {
+                "side": "Buy",
+                "price": 89.54,
+                "quantity": 1.0,
+                "type": "filled"
+            },
+            {
+                "side": "Buy",
+                "price": 89.91,
+                "quantity": 1.0,
+                "type": "filled"
+            },
+            {
+                "side": "Buy",
+                "price": 88.44,
+                "quantity": 1.0,
+                "type": "filled"
+            },
+            {
+                "side": "Sell",
+                "price": 82.4,
+                "quantity": 1.0,
+                "type": "filled"
+            },
+            {
+                "side": "Sell",
+                "price": 85.19,
+                "quantity": 1.0,
+                "type": "filled"
+            },
+            {
+                "side": "Sell",
+                "price": 92.5,
+                "quantity": 1.0,
+                "type": "filled"
+            },
+            {
+                "side": "Sell",
+                "price": 89.01,
+                "quantity": 1.0,
+                "type": "filled"
+            },
+            {
+                "side": "Sell",
+                "price": 89.47,
+                "quantity": 1.0,
+                "type": "filled"
+            },
+            {
+                "side": "Buy",
+                "price": 83.68,
+                "quantity": 1.0,
+                "type": "filled"
+            }
+        ],
+        "portfolio": {
+            "ECON": 6.0
+        }
+    },
+    "sacharya": {
+        "balance": 1011.13,
+        "active_order": {},
+        "history": [
+            {
+                "side": "Buy",
+                "price": 93.89,
+                "quantity": 1.0,
+                "type": "filled"
+            },
+            {
+                "side": "Buy",
+                "price": 89.99,
+                "quantity": 6.0,
+                "type": "filled"
+            },
+            {
+                "side": "Sell",
+                "price": 108.11,
+                "quantity": 7.0,
+                "type": "filled"
+            },
+            {
+                "side": "Buy",
+                "price": 98.39,
+                "quantity": 10.0,
+                "type": "filled"
+            },
+            {
+                "side": "Buy",
+                "price": 73.25,
+                "quantity": 1.0,
+                "type": "filled"
+            },
+            {
+                "side": "Sell",
+                "price": 85.94,
+                "quantity": 11.0,
+                "type": "filled"
+            }
+        ],
+        "portfolio": {
+            "ECON": 0.0
+        }
+    },
+    "mk": {
+        "balance": 1019.5900000000004,
+        "active_order": {},
+        "history": [
+            {
+                "side": "Buy",
+                "price": 97.1,
+                "quantity": 10.0,
+                "type": "filled"
+            },
+            {
+                "side": "Sell",
+                "price": 93.69,
+                "quantity": 1.0,
+                "type": "filled"
+            },
+            {
+                "side": "Sell",
+                "price": 96.16,
+                "quantity": 1.0,
+                "type": "filled"
+            },
+            {
+                "side": "Sell",
+                "price": 96.43,
+                "quantity": 1.0,
+                "type": "filled"
+            },
+            {
+                "side": "Sell",
+                "price": 97.89,
+                "quantity": 1.0,
+                "type": "filled"
+            },
+            {
+                "side": "Sell",
+                "price": 101.63,
+                "quantity": 1.0,
+                "type": "filled"
+            },
+            {
+                "side": "Sell",
+                "price": 104.48,
+                "quantity": 1.0,
+                "type": "filled"
+            },
+            {
+                "side": "Sell",
+                "price": 103.26,
+                "quantity": 1.0,
+                "type": "filled"
+            },
+            {
+                "side": "Sell",
+                "price": 104.28,
+                "quantity": 1.0,
+                "type": "filled"
+            },
+            {
+                "side": "Sell",
+                "price": 105.11,
+                "quantity": 1.0,
+                "type": "filled"
+            },
+            {
+                "side": "Sell",
+                "price": 108.66,
+                "quantity": 1.0,
+                "type": "filled"
+            },
+            {
+                "side": "Buy",
+                "price": 104.24,
+                "quantity": 1.0,
+                "type": "filled"
+            },
+            {
+                "side": "Sell",
+                "price": 98.69,
+                "quantity": 1.0,
+                "type": "filled"
+            },
+            {
+                "side": "Buy",
+                "price": 96.29,
+                "quantity": 1.0,
+                "type": "filled"
+            },
+            {
+                "side": "Buy",
+                "price": 97.51,
+                "quantity": 1.0,
+                "type": "filled"
+            },
+            {
+                "side": "Buy",
+                "price": 94.59,
+                "quantity": 1.0,
+                "type": "filled"
+            },
+            {
+                "side": "Buy",
+                "price": 96.69,
+                "quantity": 1.0,
+                "type": "filled"
+            },
+            {
+                "side": "Sell",
+                "price": 99.46,
+                "quantity": 1.0,
+                "type": "filled"
+            },
+            {
+                "side": "Buy",
+                "price": 89.78,
+                "quantity": 1.0,
+                "type": "filled"
+            },
+            {
+                "side": "Buy",
+                "price": 90.55,
+                "quantity": 1.0,
+                "type": "filled"
+            },
+            {
+                "side": "Buy",
+                "price": 90.55,
+                "quantity": 1.0,
+                "type": "filled"
+            },
+            {
+                "side": "Sell",
+                "price": 81.41,
+                "quantity": 1.0,
+                "type": "filled"
+            },
+            {
+                "side": "Sell",
+                "price": 86.05,
+                "quantity": 1.0,
+                "type": "filled"
+            },
+            {
+                "side": "Sell",
+                "price": 89.31,
+                "quantity": 1.0,
+                "type": "filled"
+            },
+            {
+                "side": "Sell",
+                "price": 89.98,
+                "quantity": 1.0,
+                "type": "filled"
+            },
+            {
+                "side": "Sell",
+                "price": 90.65,
+                "quantity": 1.0,
+                "type": "filled"
+            },
+            {
+                "side": "Sell",
+                "price": 89.07,
+                "quantity": 1.0,
+                "type": "filled"
+            },
+            {
+                "side": "Buy",
+                "price": 80.32,
+                "quantity": 1.0,
+                "type": "filled"
+            },
+            {
+                "side": "Buy",
+                "price": 80.55,
+                "quantity": 1.0,
+                "type": "filled"
+            },
+            {
+                "side": "Sell",
+                "price": 87.12,
+                "quantity": 1.0,
+                "type": "filled"
+            },
+            {
+                "side": "Sell",
+                "price": 88.33,
+                "quantity": 1.0,
+                "type": "filled"
+            }
+        ],
+        "portfolio": {
+            "ECON": 0.0
+        }
+    },
+    "your mom": {
+        "balance": 60.399999999999864,
+        "active_order": {},
+        "history": [
+            {
+                "side": "Buy",
+                "price": 100.0,
+                "quantity": 10.0,
+                "type": "filled"
+            },
+            {
+                "side": "Sell",
+                "price": 108.66,
+                "quantity": 10.0,
+                "type": "filled"
+            },
+            {
+                "side": "Buy",
+                "price": 107.87,
+                "quantity": 10.0,
+                "type": "filled"
+            },
+            {
+                "side": "Sell",
+                "price": 90.66,
+                "quantity": 10.0,
+                "type": "filled"
+            },
+            {
+                "side": "Buy",
+                "price": 85.41,
+                "quantity": 10.0,
+                "type": "filled"
+            }
+        ],
+        "portfolio": {
+            "ECON": 10.0
+        }
+    },
+    "cpraitm": {
+        "balance": 1000,
+        "active_order": {},
+        "history": [],
+        "portfolio": {}
+    }
+}

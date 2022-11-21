@@ -1,0 +1,459 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Arimo', sans-serif;
+}
+
+body {
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+#main-wrapper {
+    height: 900px;
+    width: 1200px;
+    margin-top: 30px;
+    margin-left: calc(50% - 600px);
+}
+
+#art-section {
+    padding-left: 80px;
+    padding-right: 80px;
+    
+}
+
+#trading-section {
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+#left {
+    float: left;
+    width: 60%;
+    padding-top: 50px;
+    height: 100%;
+}
+
+#right {
+    float: right;
+    padding-top: 50px;
+}
+
+#art-metadata {
+    margin-left: 00px;
+}
+
+
+#art-title {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+#art-artist {
+    font-size: 20px;
+    font-weight: normal;
+    opacity: .8;
+    
+}
+
+#art-description {
+    margin-top: 10px;
+}
+
+#art-image {
+    margin-top: 20px;
+    width: 90%;
+    height: 405px;
+    object-fit: contain;
+    margin-left: 5%;
+}
+
+#order-box {
+    width: 300px;
+    height: 420px;
+    margin-left: calc(50% - 150px);
+    box-shadow: 0px 1px 13px -1px rgba(0,0,0,0.1);
+    border: 1px solid #C3C3C3;
+    border-radius: 5px;
+}
+
+#buy-sell-switch {
+    padding-left: 20px;
+}
+
+#right {
+    width: 39%;
+    height: 100%;
+}
+
+.buy-sell-button {
+    width: 80px;
+    height: 40px;
+    font-size: 16px;
+    background-color: transparent;
+    padding-bottom: 10px;
+    margin-top: 10px;
+    border: none;
+}
+
+#order-form-wrapper {
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+button:hover {
+    border-bottom: 1px solid black;
+    cursor: pointer;
+}
+
+#order-box-header {
+    border-bottom: 1px solid #C3C3C3;
+}
+
+.order-input-label {
+    font-size: 14px;
+    padding-top: 12px;
+    float: left;
+}
+
+.order-input-field {
+    float: right;
+    width: 100px;
+}
+
+.order-input {
+    height: 40px;
+    margin-top: 15px;
+}
+
+input {
+    border: none;
+    width: 100%;
+    height: 100%;
+    background-color: #f1f1f1;
+    text-align: right;
+    padding-right: 20px;
+    border: 1px solid #C3C3C3;
+}
+
+#order-box-footer {
+    border-top: 1px solid #C3C3C3;
+    padding-top: 17px;
+    padding-bottom: 10px;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.active {
+    border-bottom: 1px solid black;
+}
+
+.trading-art-switch {
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 15px;
+    border-radius: 5px;
+    background-color: white;
+    border: 1px solid black;
+    transition: .5s all;
+    position: absolute;
+    top: 80px;
+    right: calc(50% - 30px);
+}
+
+.trading-art-switch:hover {
+    background-color: black;
+    cursor: pointer;
+    color: white;
+}
+
+#art-metadata-wrapper {
+    float: left;
+}
+
+#order-button {
+    width: 80%;
+    height: 50px;
+    margin-left: 10%;
+    background-color: black;
+    color: white;
+    font-size: 15px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+#active-order-wrapper {
+    margin-top: 20px;
+}
+
+#active-order-box-header {
+    font-size: 18px;
+    padding-top: 15px;
+    padding-left: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #C3C3C3;
+}
+
+#active-order-box {
+    width: 300px;
+    height: 205px;
+    margin-left: calc(50% - 150px);
+    box-shadow: 0px 1px 13px -1px rgba(0,0,0,0.1);
+    border: 1px solid #C3C3C3;
+    border-radius: 5px;
+}
+
+.active-order-row-label {
+    font-size: 14px;
+    float: left;
+    padding-left: 25px;
+}
+
+.active-order-row-value {
+    float: right;
+    width: 120px;
+    font-size: 14px;
+    text-align: right;
+    padding-right: 25px;
+}
+
+.active-order-row {
+    padding-top: 15px;
+    
+    height: 35px;
+}
+
+
+#qoute {
+    color: black;
+}
+
+.up {
+    color: #006341;
+}
+
+.down {
+    color: #9B0000;
+}
+
+#trading-features {
+    margin-left: 20px;
+}
+
+.trading-data {
+    height: 90px;
+}
+
+.row-bottom-border {
+    border-bottom: 1px solid #C3C3C3;
+}
+
+#container {
+    height: 350px;
+    width: 100%;
+    margin-top: 0px;
+}
+
+#orderbook {
+    width: 100%;
+    height: 71px;
+}
+
+
+#asks {
+    height: 35px;
+    width: 100%;
+    border-bottom: 1px solid black;
+    float: right;
+}
+
+.ask {
+    display: inline-table;
+    padding-top: 7px;
+    height: 28px;
+    width: 90px;
+    font-size: 14px;
+    text-align: center;
+    color: #FF4040;
+}
+
+#bids {
+    height: 35px;
+    width: 100%;
+}
+
+#asks-header {
+    display: inline-table;
+    margin-top: 5px;
+}
+
+#bids-header {
+    display: inline-table;
+    padding-right: 3px;
+    padding-top: 10px;
+}
+
+.bid {
+    display: inline-table;
+    padding-top: 7px;
+    height: 28px;
+    width: 90px;
+    font-size: 14px;
+    text-align: center;
+    color: #006341;
+}
+
+
+#position-box {
+    width: 78%;
+    height: 73px;
+    margin-left: 11%;
+    box-shadow: 0px 1px 13px -1px rgba(0,0,0,0.1);
+    border: 1px solid #C3C3C3;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+#position-box-data-left {
+    float: left;
+}
+
+#position-box-data-right {
+    float: right;
+   
+}
+
+#position-box-data-wrapper-left {
+    padding-top: 15px;
+    padding-left: 20px;
+}
+
+#position-box-data-wrapper-right {
+    padding-top: 15px;
+    padding-right: 20px;
+    text-align: right;
+}
+
+#position-box-title {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+#position-box-price {
+    font-size: 14px;
+    margin-top: 8px;
+    color: gray;
+}
+
+#position-box-type {
+    font-size: 14px;
+    margin-top: 7px;
+    color: gray;
+}
+
+#orders-header {
+    margin-top: 35px;
+    margin-left: 11%;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+hr {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 88%;
+    background-color: #C3C3C3;
+    border: 1px solid #C3C3C3;
+}
+
+select {
+    border: none;
+    width: 122px;
+    height: 100%;
+    background-color: #f1f1f1;
+    text-align: right;
+    border: 1px solid #C3C3C3;
+    float: right;
+    color: gray;
+}
+
+#bids-wrapper {
+    display: inline;
+    width: 100%;
+    overflow-x: scroll;
+}
+
+#asks-wrapper {
+    display: inline;
+    width: 500px;
+    overflow-x: scroll;
+}
+
+#user-data-box {
+    width: 300px;
+    height: 205px;
+    margin-left: calc(50% - 150px);
+    box-shadow: 0px 1px 13px -1px rgba(0,0,0,0.1);
+    border: 1px solid #C3C3C3;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+#no-orders {
+    text-align: center;
+    font-size: 20px;
+}
+
+.trade-feature {
+    width: 32.4%;
+    display: inline-table;
+    border-right: 1px solid black;
+    text-align: center;
+}
+
+#volume {
+    border-left: 1px solid black;
+}
+
+#order-estimate {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 14px;
+}
+
+#orders-wrapper {
+    height: 300px;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+
+#alerts {
+    margin-top: 20px;
+    width: 300px;
+    margin-left: calc(50% - 150px);
+}
+
+.alert {
+    width: 300px - calc(50% - 150px);
+    border: 1px solid #C3C3C3;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0px 1px 13px -1px rgba(0,0,0,0.1);
+}
+
+.danger {
+    background-color: rgba(255,48,48,0.7);
+}
+
+.success {
+    background-color: rgba(0,99,65,0.7);
+}

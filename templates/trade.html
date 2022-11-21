@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Trade</title>
+        <link rel="stylesheet" href="/api/css/trade.css">
+        <meta id="username" content="{{ username }}">
+        <meta id="owned-quantity" content="{{ user_data['quantity'] }}">
+    </head>
+    <body>
+        <meta id="buy-sell-switch" value="buy">
+        <div id="navbar">
+
+        </div>
+        <button id="switch-view-button" class="trading-art-switch">Art View</button>
+        <div id="main-wrapper">
+            
+            <div id="left">
+                <div id="trading-section-wrapper">
+                    <div id="trading-section">
+                        <div id="art-metadata" class="trading-data">
+                            <div id="art-metadata-wrapper">
+                                <h1 id="art-title">{{ticker}}</h1>
+                                <h5 id="art-artist"><span id="qoute">${{ticker_data['last_trade_price']}}</span> <span id="change">({{(ticker_data['last_trade_price'] / ticker_data['price']) - 1}}%)</span></h5>
+                            </div>
+                            
+                            
+                        </div>
+                        <div id="volume" class="trade-feature">Volume: {{ticker_data['volume']}}</div>
+                        <div class="trade-feature">IPO Price: ${{ticker_data['price']}}</div>
+                        <div class="trade-feature">Quantity: {{ticker_data['quantity']}}</div>
+                        <div id="container"></div>
+                        <div id="orderbook">
+                            <div id="asks">
+                                <div id="asks-header">Asks: </div>
+                                <div id="asks-wrapper">
+                                    {% for price, quantity in ticker_data['orderbook']['asks'] %}
+                                        <div class="ask">{{price}} ({{quantity}})</div>
+                                    {% endfor %}
+                                    <!-- <div class="ask">&nbsp;100.0 (2)</div><div class="ask">103.24 (10)</div><div class="ask">105.17 (3)</div> -->
+                                </div>
+                                
+                            </div>
+                            <div id="bids">
+                                <div id="bids-header">Bids: </div>
+                                <div id="bids-wrapper">
+                                    {% for price, quantity in ticker_data['orderbook']['bids'] %}
+                                        <div class="bid">{{price}} ({{quantity}})</div>
+                                    {% endfor %}
+                                    <!-- <div class="bid">&nbsp;99.0 (2)</div><div class="bid">97.25 (10)</div><div class="bid">95.56 (3)</div><div class="bid">95.56 (3)</div> -->
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div id="art-section-wrapper">
+                    <div id="art-section">
+                        <div id="art-metadata">
+                            <div id="art-metadata-wrapper">
+                                <h1 id="art-title">{{ticker_data['title']}}</h1>
+                                <h5 id="art-artist">{{ticker_data['artist']}}</h5>
+                                <p id="art-description">{{ticker_data['description']}}</p>
+                            </div>
+
+                        </div>
+                        <div id="art-image-wrapper">
+                            <img id="art-image" src="/api/misc/bunting.png" alt="Will's Bird">
+                        </div> 
+                        
+                    </div>
+                </div>
+                <div id="orders-header">
+                    <div id="orders-header-text">Order History:</div>
+                    <hr>
+                </div>
+                <div id="orders-wrapper">
+                    <div id="no-orders">Order history is empty! Make some orders $$$</div>
+                </div>
+                  
+                
+            </div>
+            <div id="right">
+                <div id="user-data-order-wrapper">
+                    <div id="user-data-box">
+                        <div id="active-order-box-header">
+                            <div id="active-order-box-header-text">{{username}}:</div>
+                        </div>
+                        <div class="active-order-row row-bottom-border">
+                            <div class="active-order-row-label">Balance:</div>
+                            <div id="balance" class="active-order-row-value">${{user_data['balance']}}</div>
+                        </div>
+                        <div class="active-order-row row-bottom-border">
+                            <div class="active-order-row-label">Portfolio Value:</div>
+                            <div id="portfolio-value" class="active-order-row-value">${{user_data['balance']}}</div>
+                        </div>
+                        <div class="active-order-row">
+                            <div class="active-order-row-label">Pieces Owned:</div>
+                            <div id="pieces-owned" class="active-order-row-value">0</div>
+                        </div>
+                       
+                    </div>
+                </div>
+                <div id="order-wrapper">
+                    <div id="order-box">
+                        <div id="order-box-header">
+                            <div id="buy-sell-switch">
+                                <button id="buy-button" class="buy-sell-button active">Buy Art</button>
+                                <button id="sell-button" class="buy-sell-button">Sell Art</button>
+                            </div>
+                        </div>
+                        <div id="order-form-wrapper">
+                            <div class="order-input">
+                                <div class="order-input-label">Type: </div>
+                                <select id="market-limit-switch" onchange="marketLimitChange(this)">
+                                    <option value="market">Market</option>
+                                </select>
+                            </div>
+                            <div class="order-input">
+                                <div class="order-input-label" id="price-input-label">Market Price: </div>
+                                <input id="price-input" class="order-input-field" type="text" placeholder="100.0" disabled>
+                            </div>
+                            <div class="order-input">
+                                <div class="order-input-label">Quantity:</div>
+                                <input id="quantity-input" class="order-input-field" type="text" placeholder="0">
+                            </div>
+                            <div id="order-estimate">Estimated Order Cost: $1000</div>
+                        </div>
+                        <button id="order-button">Submit Order</button>
+                        <div id="order-box-footer">
+                            <div id="order-box-footer-text">${{user_data['balance']}} buying power available</div>
+                        </div>
+                        
+                    </div>
+                    <div id="alerts">
+                        
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+        <script src="https://cdn.anychart.com/releases/v8/js/anychart-base.min.js"></script>
+        <script src="https://cdn.anychart.com/releases/v8/js/anychart-ui.min.js"></script>
+        <script src="https://cdn.anychart.com/releases/v8/js/anychart-exports.min.js"></script>
+        <link href="https://cdn.anychart.com/releases/v8/css/anychart-ui.min.css" type="text/css" rel="stylesheet">
+        <link href="https://cdn.anychart.com/releases/v8/fonts/css/anychart-font.min.css" type="text/css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js" integrity="sha512-q/dWJ3kcmjBLU4Qc47E4A9kTB4m3wuTY7vkFJDTZKjTs8jhyGQnaUrxa0Ytd0ssMZhbNua9hE+E7Qv1j+DyZwA==" crossorigin="anonymous"></script>        <script src="/api/js/trade.js"></script>
+        <script src="/api/js/trade.js"></script>
+        <script src="/api/js/order.js"></script>
+    </body>
+</html> 

@@ -1,0 +1,59 @@
+#launch-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+#create-wrapper {
+    width: 800px;
+    margin-left: calc(50% - 400px);
+    margin-top: 10vh;
+}
+
+h1 {
+    text-align: center;
+}
+
+#art-choose-wrapper {
+    margin-top: 50px;
+    width: 45%;
+    float: left;
+}
+
+#art-placeholder {
+    background-image: url("/api/misc/mona_lisa.jpg");
+    background-size: cover;
+    background-color: rgba(0,0,0,0.5);
+    background-blend-mode: darken;
+    width: 100%;
+    height: 500px;
+    z-index: -1;
+    text-align: center;
+    padding-top: 230px;
+    font-size: 20px;
+    color: white;
+    background-position: center;
+}
+
+#art-placeholder-cover {
+    width: 100%;
+    height: 500px;
+    background-color: black;
+    z-index: 2;
+}
+
+
+#art-form {
+    width: 45%;
+    float: right;
+    margin-top: 20px;
+}
+
+#launch-button {
+    width: 100%;
+    margin-top: 25px;
+}
+
+#launch-button:hover {
+    background-color: #4CAF50;
+}
