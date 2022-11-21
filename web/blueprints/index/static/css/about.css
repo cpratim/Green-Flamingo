@@ -241,14 +241,14 @@ button {
 }
 
 .home_graph{
-    width: 100%;
+    width: 85%;
     border-style: solid;
-    margin-top: 8rem;
+    margin-top: 5rem;
 }
 
 /* problem */
 .problem{
-    border-top: 1px solid black;
+    /* border-top: 1px solid black; */
     background: #F0F0F0;
     display: flex; 
     justify-content: center;
@@ -304,7 +304,7 @@ button {
 
 /* features */
 .features{
-    border-top: 1px solid black;
+    /* border-top: 1px solid black; */
     display: flex; 
     justify-content: center;
     align-items: center;
@@ -353,7 +353,7 @@ button {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    border-top: 1px solid black;
+    /* border-top: 1px solid black; */
 }
 
 .functions_container{
