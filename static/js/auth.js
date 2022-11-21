@@ -26,7 +26,7 @@ function authenticateUser(username) {
                     'Access-Control-Allow-Origin': '*'
                 },
             }).then(response => {
-                window.location.href = '/';
+                window.location.href = '/trade';
             });
         } else {
             let alert = createAlert('danger', 'Invalid Credentials!', '/login', 'Try Again!');
