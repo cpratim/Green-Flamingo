@@ -50,12 +50,21 @@ h1, h2, h3 {
     font-weight: var(--font-medium);
 }
 
-ul {
+a {
+    text-decoration: none;
+}
+
+ula {
     list-style: none;
 }
 
-a {
-    text-decoration: none;
+li {
+    margin-left: 30px;
+    line-height: 30px;
+}
+
+li.indent{
+    margin-left: 60px;
 }
 
 button {

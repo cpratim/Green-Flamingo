@@ -7,7 +7,7 @@ def refresh_database():
         data = {
             "ECON": {
                 "title": "Wood Duck",
-                "art_id": "wodu",
+                "art_id": "econ",
                 "artist": "Will Johnson",
                 "price": 100,
                 "quantity": 10,

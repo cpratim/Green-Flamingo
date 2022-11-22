@@ -6,7 +6,7 @@ from flask_socketio import socketio
 from api.database import Database, refresh_database
 from flask_ngrok import run_with_ngrok
 
-# refresh_database()
+refresh_database()
 database = Database()
 socketio = SocketIO()
 
@@ -58,4 +58,4 @@ def new_user():
 socketio.init_app(app)
 
 if __name__ == '__main__':
-    socketio.run(app, debug=False, host='0.0.0.0', port=80)
+    socketio.run(app, debug=True, port=5500)
